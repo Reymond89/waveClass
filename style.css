@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.footer{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: #3586FF;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.footer__picture{
+  
+}
+.footer__picture .wave{
+    width: 100%;
+    position: absolute;
+    bottom: 179px;
+    height: 100px;
+    left: 0;
+    background: url(assets/img/wave1.png);
+    background-size: 1440px 100px;
+    
+}
+.wave1{
+    z-index: 2;
+    opacity: 1;
+    animation: wave_1 6s linear infinite;
+}
+@keyframes wave_1 {
+    0%{
+        background-position-x: 1440px;
+    }
+    100%{
+        background-position-x: 0;
+    }
+}
+.wave2{
+    z-index: 1;
+    opacity: 0.8;
+    animation: wave_2 5s linear infinite;
+}
+@keyframes wave_2 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1440px;
+    }
+}
+.wave3{
+    z-index: 2;
+    opacity: 0.6;
+    animation: wave_1 4s linear infinite;
+}
+.wave4{
+    z-index: 1;
+    opacity: 0.3;
+    animation: wave_2 4s linear infinite;
+}
+
+
+
+
+
+.footer__social{
+    display: flex;
+    gap: 30px;
+}
+.fa-brands{
+    font-size: 1.5rem;
+    color: white;
+    transition: 0.7s;
+    
+}
+.fa-brands:hover{
+    transform: translateY(-10px);
+}
+.footer__menu{
+    display: flex;
+    gap: 40px;
+ 
+}
+.footer__menu li a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+.footer__text{
+    font-size: 1rem;
+    color: white;
+}
+@media screen and (max-width: 760px) {
+    .footer__menu{
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .footer{
+        padding: 10px;
+        justify-content: flex-end;
+    }
+    .footer__menu li a{
+        font-size: 1rem;
+    }
+    .footer__text{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+}
